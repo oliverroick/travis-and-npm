@@ -1,10 +1,11 @@
 {
   "name": "travis-and-npm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Testing automatic deployment of node packages",
-  "main": "index.js",
+  "main": "dist/index.min.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/oliverroick/travis-and-npm/issues"
   },
-  "homepage": "https://github.com/oliverroick/travis-and-npm#readme"
+  "homepage": "https://github.com/oliverroick/travis-and-npm#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2"
+  }
 }
