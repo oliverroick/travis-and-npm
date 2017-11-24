@@ -7,5 +7,4 @@ gulp.task('build', function() {
   gulp.src('index.js')
     .pipe(rename('index.min.js'))
     .pipe(gulp.dest('dist'));
-  
 });
