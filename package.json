@@ -1,6 +1,6 @@
 {
   "name": "travis-and-npm",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Testing automatic deployment of node packages",
   "main": "dist/index.min.js",
   "scripts": {

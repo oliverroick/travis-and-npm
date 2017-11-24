@@ -1,24 +1,24 @@
 language: node_js
 node_js:
-  - '8'
-  - '7'
-
+- '8'
+- '7'
 jobs:
   include:
-    - stage: Build
-      if: tag IS PRESENT
-      repo: oliverroick/travis-and-npm
-      node_js: '8'
-      script: 'npm run build'
-    - stage: NPM release
-      if: tag IS PRESENT
-      repo: oliverroick/travis-and-npm
-      node_js: '8'
-      script: npm run build
-      deploy:
-        provider: npm
-        email: oliver.roick@gmail.com
-        api_key:
-          secure: qS8GJdaRXUoSq7WxgU6vmVRFm7L7/9YltamS2ANvA3u6bJj+maQNSULy3YJlxf5MmpTn5tFwZTFmdY2N5Wh6aJHZaXBcK5xfacAI496cl8z5f8Zxo9YOLf2KupVzFDWhFK/TK7dbBIvq9J/0ySTbxNT/uYTNCdfmRiJ1PZIUt762uwWagbCQwcLF8ubHYUwbhq5uEybJwUWz35qZZN2fq/wF90aeKtCbFaYL/Y2RE1t5J+ahV1k2YKaAJklYTb/RAxcAycHwoaOKQzUt3kijEp56bJZ0BfLtqk9K3Ixi+zSwG7rYMuSXGDZlVEIeCuH6R+nFzoomHRrHTAs7o+4+FpfLBQd1JTC6i0O1yic5wnPRYoGdqc+5bQlfptEUNxgQq8j2veJu7L9DfPAd2ZZ86/BS8TUdYkDG1lNaWRqMyDRm4ksUXAyHs7ehPxWQwhhg/1wCKCFQ1z0CvHoyzOh2eg/iaydAbP/Uvf2aXYF/ItOGjcVvrfegYI5cSvnpJJAnfM1sFzE4iNd1xU7Y/fdOPGLM2ttSKe0asjn1ZAB8yVtLp2uNgVJTwY3fkpWdoZ+Az+vB102MGJkQx9GHmJqKYQg+6C7/ccNDGRxXe5Np9jINrkZM624j1BBsWi1sUQPs69+As+Hi8CUfePhehN1Ae+Sv0Lx3vxp+LsBnlKbkog8=
-        on:
-          tags: true  
+  - stage: Build
+    if: tag IS PRESENT
+    repo: oliverroick/travis-and-npm
+    node_js: '8'
+    script: npm run build
+  - stage: NPM release
+    if: tag IS PRESENT
+    repo: oliverroick/travis-and-npm
+    node_js: '8'
+    script: npm run build
+    deploy:
+      provider: npm
+      email: oliver.roick@gmail.com
+      api_key:
+        secure: qS8GJdaRXUoSq7WxgU6vmVRFm7L7/9YltamS2ANvA3u6bJj+maQNSULy3YJlxf5MmpTn5tFwZTFmdY2N5Wh6aJHZaXBcK5xfacAI496cl8z5f8Zxo9YOLf2KupVzFDWhFK/TK7dbBIvq9J/0ySTbxNT/uYTNCdfmRiJ1PZIUt762uwWagbCQwcLF8ubHYUwbhq5uEybJwUWz35qZZN2fq/wF90aeKtCbFaYL/Y2RE1t5J+ahV1k2YKaAJklYTb/RAxcAycHwoaOKQzUt3kijEp56bJZ0BfLtqk9K3Ixi+zSwG7rYMuSXGDZlVEIeCuH6R+nFzoomHRrHTAs7o+4+FpfLBQd1JTC6i0O1yic5wnPRYoGdqc+5bQlfptEUNxgQq8j2veJu7L9DfPAd2ZZ86/BS8TUdYkDG1lNaWRqMyDRm4ksUXAyHs7ehPxWQwhhg/1wCKCFQ1z0CvHoyzOh2eg/iaydAbP/Uvf2aXYF/ItOGjcVvrfegYI5cSvnpJJAnfM1sFzE4iNd1xU7Y/fdOPGLM2ttSKe0asjn1ZAB8yVtLp2uNgVJTwY3fkpWdoZ+Az+vB102MGJkQx9GHmJqKYQg+6C7/ccNDGRxXe5Np9jINrkZM624j1BBsWi1sUQPs69+As+Hi8CUfePhehN1Ae+Sv0Lx3vxp+LsBnlKbkog8=
+      on:
+        tags: true
+        repo: oliverroick/travis-and-npm
