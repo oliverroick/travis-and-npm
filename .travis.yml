@@ -13,7 +13,10 @@ jobs:
     if: tag IS PRESENT
     repo: oliverroick/travis-and-npm
     node_js: '8'
-    script: npm run build
+    script:
+      - npm run build
+      - [ ! -f dist/index.js ] && exit 1
+      - [ ! -f dist/index.min.js ] && exit 1
     skip_cleanup: true
     deploy:
       provider: npm

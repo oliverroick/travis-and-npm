@@ -1,8 +1,9 @@
 {
   "name": "travis-and-npm",
-  "version": "1.0.7",
+  "version": "1.0.10",
   "description": "Testing automatic deployment of node packages",
   "main": "dist/index.min.js",
+  "files": ["dist"],
   "scripts": {
     "test": "node test.js",
     "build": "gulp build"
