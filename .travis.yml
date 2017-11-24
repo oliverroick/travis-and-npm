@@ -14,6 +14,7 @@ jobs:
     repo: oliverroick/travis-and-npm
     node_js: '8'
     script: npm run build
+    skip_cleanup: true
     deploy:
       provider: npm
       email: oliver.roick@gmail.com
