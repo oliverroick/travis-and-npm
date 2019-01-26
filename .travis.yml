@@ -11,7 +11,8 @@ jobs:
       - npm run build
     skip_cleanup: true
     before_deploy:
-      - PACKAGE_VERSION=PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
+      - PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
+      - echo $PACKAGE_VERSION
       - '[ "$PACKAGE_VERSION" != "$TRAVIS_TAG" ] && echo "Git and NPM do not match" && exit 1'
     deploy:
       provider: npm
