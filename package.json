@@ -3,10 +3,13 @@
   "version": "1.0.14",
   "description": "Testing automatic deployment of node packages",
   "main": "dist/index.min.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "node test.js",
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "npm version 1.0.15"
   },
   "repository": {
     "type": "git",
@@ -18,8 +21,7 @@
     "url": "https://github.com/oliverroick/travis-and-npm/issues"
   },
   "homepage": "https://github.com/oliverroick/travis-and-npm#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2"

@@ -15,7 +15,7 @@ jobs:
       - echo $PACKAGE_VERSION
       - |
         if [[ "$PACKAGE_VERSION" != "$TRAVIS_TAG" ]]; then
-          echo "Git and NPM do not match"
+          echo "Git and NPM versions do not match. Have you updated package.json?"
           exit 1
         fi;
     deploy:
